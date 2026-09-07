@@ -93,3 +93,9 @@ xxhash==3.5.0
 yarl==1.20.1
 youtube-transcript-api==0.6.2
 zstandard==0.23.0
+# LangChain & LangGraph Core Ecosystem
+langchain-core>=0.3.0
+langgraph>=0.6.0
+
+# Official Google GenAI & Embedding Integration
+langchain-google-genai>=4.4.0
