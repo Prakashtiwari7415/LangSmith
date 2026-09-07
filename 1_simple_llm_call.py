@@ -1,5 +1,6 @@
 from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_core.tools import tool
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
@@ -8,7 +9,7 @@ load_dotenv()
 # Simple one-line prompt
 prompt = PromptTemplate.from_template("{question}")
 
-model = ChatOpenAI()
+model = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.7)
 parser = StrOutputParser()
 
 # Chain: prompt → model → parser
